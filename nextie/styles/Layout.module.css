@@ -3,7 +3,7 @@
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -12,10 +12,12 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  font-size: 1.25rem;
 }
 
+/*
 .footer {
   width: 100%;
   height: 100px;
@@ -113,6 +115,7 @@
 .logo {
   height: 1em;
 }
+*/
 
 @media (max-width: 600px) {
   .grid {
