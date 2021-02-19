@@ -20,6 +20,7 @@ const article = ({ article }) => {
 }
 
 export const getServerSideProps = async (context) => {
+
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`);
 
     const article = await res.json()
@@ -30,5 +31,28 @@ export const getServerSideProps = async (context) => {
         },
     }
 }
+
+
+// export const getServerSideProps = (context) => {
+
+//     const id = context.params.id;
+//     const articles = require('../../../localData/data.json');
+
+//     let article = {}
+//     for (let i = 0; i < articles.length; i++) {
+//         if (id == articles[i].id) {
+//             article.id = articles[i].id;
+//             article.title = articles[i].title;
+//             article.body = articles[i].body;
+//             break;
+//         }
+//     }
+
+//     return {
+//         props: {
+//             article
+//         }
+//     }
+// }
 
 export default article;

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Michael",
+    "body": "Cuccia",
+    "age": 41,
+    "yearOfBirth": 1979
+  },
+  {
+    "id": 2,
+    "title": "Leela",
+    "body": "Cuccia",
+    "age": 6,
+    "yearOfBirth": 2014
+  },
+  {
+    "id": 3,
+    "title": "Renita",
+    "body": "Cuccia",
+    "age": 39,
+    "yearOfBirth": 1981
+  },
+  {
+    "id": 4,
+    "title": "Santino",
+    "body": "Cuccia",
+    "age": 9,
+    "yearOfBirth": 2011
+  }
+]

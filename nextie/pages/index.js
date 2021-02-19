@@ -8,6 +8,7 @@ export default function Home({ articles }) {
       <h3>
         <Head>
           <title>Head</title>
+          <meta lang='en'></meta>
         </Head>
         Hello, from index.js
       </h3>
@@ -27,3 +28,14 @@ export const getStaticProps = async () => {
   }
 
 }
+
+// export const getStaticProps = async () => {
+//   const articles = require('../localData/data.json');
+
+//   return {
+//     props: {
+//       articles
+//     }
+//   }
+
+// }
