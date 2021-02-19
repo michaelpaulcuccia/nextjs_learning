@@ -20,27 +20,22 @@ export const getServerSideProps = (context) => {
     const articles = require('../../../localData/data.json');
 
     let article = {};
-    let testObj = {};
+
     for (let i = 0; i < articles.length; i++) {
         if (id == articles[i].id) {
             article.id = articles[i].id;
             article.title = articles[i].title;
             article.body = articles[i].body;
-
-            let newBody = JSON.stringify(articles[i].body);
-            testObj.body = newBody;
-
             break;
         }
     }
 
-
-    if (testObj.body.includes('&1')) {
+    if (article.body.includes('&1')) {
         //https://stackoverflow.com/questions/13340131/string-prototype-replaceall-not-working
-        const updatedBody = testObj.body.replace(/&1/g, '\n');
-        console.log(updatedBody)
-    } else {
-        console.log('not found')
+        //global css - white-space: pre-wrap;
+        const string = JSON.stringify(article.body);
+        const updatedBody = string.replace(/&1/g, '\n');
+        article.body = updatedBody;
     }
 
     return {
