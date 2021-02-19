@@ -5,11 +5,14 @@ const Header = () => {
     return (
         <div>
             <h3 className={headerStyles.title}>
-                <span>Next.js </span>by Michael Cuccia
+                <span>Exceptional </span>by Ren D.
             </h3>
             <p className={headerStyles.para}>
-                Server-Side Rendering
+                <strong>Indian American. Mama. Wife. </strong>
             </p>
+            <div>
+                <small>I write about personal growth, self-awareness, life lessons, parenting and love.</small>
+            </div>
         </div >
     )
 }

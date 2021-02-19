@@ -5,10 +5,10 @@ const about = () => {
     return (
         <div>
             <Head>
-                <title>About Head</title>
+                <title>About: Exceptional</title>
             </Head>
             <h3>
-                Hello, from about.js
+                The hawtest mama with the sweetest booty
             </h3>
         </div>
     )
