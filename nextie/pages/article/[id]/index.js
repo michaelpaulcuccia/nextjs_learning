@@ -43,8 +43,6 @@ export const getServerSideProps = (context) => {
     let length = articleToBeTrimmed.length - 2;
     const newString = articleToBeTrimmed.substr(1, length);
     article.body = newString;
-    console.log(article.body)
-
 
     return {
         props: {
