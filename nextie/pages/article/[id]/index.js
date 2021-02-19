@@ -34,9 +34,17 @@ export const getServerSideProps = (context) => {
         //https://stackoverflow.com/questions/13340131/string-prototype-replaceall-not-working
         //global css - white-space: pre-wrap;
         const string = JSON.stringify(article.body);
-        const updatedBody = string.replace(/&1/g, '\n');
+        const updatedBody = string.replace(/&1/g, '\n     ');
         article.body = updatedBody;
     }
+
+    //trim quotation marks
+    let articleToBeTrimmed = article.body;
+    let length = articleToBeTrimmed.length - 2;
+    const newString = articleToBeTrimmed.substr(1, length);
+    article.body = newString;
+    console.log(article.body)
+
 
     return {
         props: {
