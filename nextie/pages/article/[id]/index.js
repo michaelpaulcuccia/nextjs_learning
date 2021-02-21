@@ -6,7 +6,7 @@ const article = ({ article }) => {
     return (
         <>
             <h2>{article.title}</h2>
-            <br />
+            <p>{article.type}</p>
             <p>{article.body}</p>
             <br />
             <Link href='/'><a style={{ color: 'blue', fontSize: '26px', fontWeight: 'bold' }} >Go Back</a></Link>
@@ -16,20 +16,25 @@ const article = ({ article }) => {
 
 export const getServerSideProps = (context) => {
 
+    //get article using ID
     const id = context.params.id;
     const articles = require('../../../localData/data.json');
 
+    //create article object
     let article = {};
 
+    //build object
     for (let i = 0; i < articles.length; i++) {
         if (id == articles[i].id) {
             article.id = articles[i].id;
             article.title = articles[i].title;
             article.body = articles[i].body;
+            article.type = [articles[i].type];
             break;
         }
     }
 
+    //take care of new-line character
     if (article.body.includes('&1')) {
         //https://stackoverflow.com/questions/13340131/string-prototype-replaceall-not-working
         //global css - white-space: pre-wrap;

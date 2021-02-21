@@ -17,7 +17,16 @@ export default function Home({ articles }) {
 }
 
 export const getStaticProps = async () => {
+
+  //local JSON
   const articles = require('../localData/data.json');
+
+  //API
+  /*
+  const url = 'http://localhost:3000';
+  const articles = await fetch(`${url}/api/articles`);
+  console.log(articles)
+  */
 
   return {
     props: {
